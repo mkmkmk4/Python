@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy as sp
+
+def Fibonacci(n):
+    if (n==0):
+        return n
+    elif(n==1):
+        return n
+    else :
+        return Fibonacci(n-1)+Fibonacci(n-2)
+
+F=np.zeros(30)
+Golden_Ratio=np.zeros(len(F))
+for i in range(len(F)):
+    F[i]=Fibonacci(i)
+    Golden_Ratio[i]=Fibonacci(i+2)/Fibonacci(i+1)
+
+plt.plot(F,Golden_Ratio)
+plt.gca()
+plt.set
+plt.show()
+
+print (F)
+print (Golden_Ratio)
+"""
+est=2                             #Original estimate of sqrt
+S=34                              #Number trying to find to sqrt of
+A=np.zeros(10)                    #Increase Arg to increase accuracy of sqrt
+def Bab(n ,S ):
+    est=(n+(S/n))/2
+    return (est)
+
+
+for i in range(len(A)):
+    est=Bab(est,S)
+    A[i]=est
+
+    
+print (A) 
+    
+    
+
